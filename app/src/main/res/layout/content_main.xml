@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="edu.tamu.csce315team11.weatherapp.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:id="@+id/content">
+
+    <WebView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/webView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:scrollbars="none" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView" />
+
+    <TableLayout android:id= "@+id/forecast"
+         android:layout_width="match_parent"
+         android:layout_height="fill_parent"
+         android:gravity="bottom"
+        android:background="#90ffffff"
+        android:layout_alignBottom="@+id/webView"
+        android:stretchColumns="1,2"
+        android:layout_below="@+id/highLow"
+        android:layout_marginTop="30dp"
+        android:nestedScrollingEnabled="true">
+
+
+    </TableLayout>
+        <TextView android:id="@+id/temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:textSize="90sp"
+            android:text="0ºF"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textAlignment="center" />
+
+        <TextView android:id ="@+id/wind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loading wind speed..."
+            android:layout_below="@id/temp"
+            android:textSize="20sp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/webView"
+            android:layout_alignEnd="@+id/webView"
+            android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/highLow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loading data..."
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:layout_marginTop="23dp"
+        android:layout_below="@+id/wind"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/zip_code"
+        android:src="@drawable/ic_location"
+        android:background="#00ffffff"
+        android:onClick="openBox"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp" />
+
+        <TextView android:id="@+id/place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/zip_code"
+            android:textSize="20sp"
+            />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/music"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:src="@android:drawable/ic_lock_silent_mode"
+        android:onClick="toggleMute"
+        android:background="#00ffffff" />
+</RelativeLayout>

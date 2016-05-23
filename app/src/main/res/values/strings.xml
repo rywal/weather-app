@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">T11 Weather</string>
+    <string name="action_settings">Settings</string>
+    <string name="Zip">ZIP Code</string>
+    <string name="update_location_button">Location</string>
+    <string name="title_activity_zip">Update Location</string>
+    <string name="enter">Update</string>
+    <string name="GPS">Use GPS</string>
+    <string name="fc">Forecast</string>
+    <string name="Sun">Sun</string>
+    <string name="Mon">Monday</string>
+    <string name="Tue">Tuesday</string>
+    <string name="Wed">Wednesday</string>
+    <string name="Thu">Thursday</string>
+    <string name="Fri">Friday</string>
+    <string name="Sat">Saturday</string>
+</resources>
